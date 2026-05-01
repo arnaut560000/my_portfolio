@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  metadataBase: new URL("https://yang-arnautea.vercel.app"),
+  metadataBase: new URL("https://luxury-nasturtium-1af21d.netlify.app"),
   title: "Arnaut Ezekiel Alfonso | Portfolio",
   description:
     "Portfolio of Arnaut Ezekiel Alfonso, a web developer building practical systems for operations, tracking, mapping, and automation.",
@@ -9,7 +9,7 @@ export const metadata = {
     title: "Arnaut Ezekiel Alfonso | Portfolio",
     description:
       "Practical web systems for operations, tracking, mapping, dashboards, and workflow tools.",
-    url: "https://yang-arnautea.vercel.app",
+    url: "https://luxury-nasturtium-1af21d.netlify.app",
     siteName: "Arnaut Ezekiel Alfonso Portfolio",
     images: [
       {
