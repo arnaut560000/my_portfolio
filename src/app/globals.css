@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #09090b;
+  --panel: rgba(18, 20, 26, 0.8);
+  --panel-strong: #111216;
+  --line: rgba(255, 255, 255, 0.1);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.64);
+  --primary: #d6a066;
+  --accent: #7dd3fc;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top right, rgba(214, 160, 102, 0.16), transparent 28%),
+    radial-gradient(circle at 15% 20%, rgba(125, 211, 252, 0.08), transparent 22%),
+    linear-gradient(180deg, #060709 0%, #09090b 40%, #0d1015 100%);
+  color: var(--text);
+  overflow-x: hidden;
+  font-family: Bahnschrift, "Segoe UI Variable", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::selection {
+  background: rgba(214, 160, 102, 0.3);
+}
+
+.section-container {
+  @apply mx-auto max-w-7xl px-6 md:px-10;
+}
+
+.orange-btn {
+  @apply inline-flex items-center justify-center rounded-full border border-primary/40 bg-primary/90 px-6 py-3 text-sm font-semibold tracking-[0.12em] text-black transition duration-300 hover:-translate-y-0.5 hover:bg-primary;
+}
+
+.outline-btn {
+  @apply inline-flex items-center justify-center rounded-full border border-white/15 bg-white/[0.03] px-6 py-3 text-sm font-semibold tracking-[0.12em] text-white transition duration-300 hover:-translate-y-0.5 hover:border-primary/60 hover:bg-white/[0.06];
+}
+
+.card-dark {
+  @apply rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-glow backdrop-blur-xl;
+}
+
+.orange-glow {
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+}
+
+.grid-lines {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+.eyebrow {
+  @apply inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.26em] text-white/70;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 9999px;
+  background: var(--primary);
+  box-shadow: 0 0 18px rgba(214, 160, 102, 0.5);
+}
+
+.section-title {
+  @apply text-3xl font-semibold leading-tight text-white md:text-5xl;
+}
+
+.section-copy {
+  @apply text-base leading-8 text-white/65 md:text-lg;
+}
+
+.frame-lines {
+  background-image:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent);
+}
+
+.tech-panel {
+  @apply rounded-[1.5rem] border border-white/10 bg-black/30 backdrop-blur-md;
+}
