@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://yang-arnautea.vercel.app/sitemap.xml
+Sitemap: https://luxury-nasturtium-1af21d.netlify.app/sitemap.xml

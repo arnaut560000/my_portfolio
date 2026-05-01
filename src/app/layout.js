@@ -13,7 +13,7 @@ export const metadata = {
     siteName: "Arnaut Ezekiel Alfonso Portfolio",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://luxury-nasturtium-1af21d.netlify.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "Arnaut Ezekiel Alfonso web developer portfolio preview"
@@ -27,7 +27,7 @@ export const metadata = {
     title: "Arnaut Ezekiel Alfonso | Portfolio",
     description:
       "Practical web systems for operations, tracking, mapping, dashboards, and workflow tools.",
-    images: ["/og-image.png"]
+    images: ["https://luxury-nasturtium-1af21d.netlify.app/og-image.png"]
   }
 };
 
