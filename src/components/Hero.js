@@ -134,7 +134,7 @@ export default function Hero() {
               transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
             >
               <img
-                src="/media/profile.png"
+                src="/media/profile.jpg"
                 alt="Arnaut Ezekiel Alfonso"
                 className="block h-auto w-full opacity-95"
               />
