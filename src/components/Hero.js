@@ -10,17 +10,35 @@ const socialLinks = [
   { label: "Email", href: "mailto:arnautAlfonsor8@gmail.com", icon: Mail }
 ];
 
+const floatingLabels = ["NEXT.JS", "REACT", "FLASK", "MYSQL"];
+
 export default function Hero() {
   return (
     <section
       id="home"
       className="relative min-h-screen overflow-hidden pb-16 pt-28 md:pt-32"
     >
-      <div className="absolute inset-0 hero-grid opacity-65"></div>
+      <motion.div
+        className="absolute inset-0 hero-grid opacity-65"
+        animate={{ backgroundPosition: ["0px 0px", "54px 54px"] }}
+        transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
+      ></motion.div>
       <div className="absolute inset-x-0 top-0 h-56 bg-gradient-to-b from-primary/10 to-transparent"></div>
-      <div className="absolute right-0 top-0 h-full w-[42%] bg-[linear-gradient(90deg,transparent,rgba(214,160,102,0.08))]"></div>
-      <div className="absolute left-[8%] top-[25%] h-px w-[78%] rotate-[24deg] bg-accent/35"></div>
-      <div className="absolute left-[13%] top-[18%] h-px w-[68%] -rotate-[20deg] bg-accent/25"></div>
+      <motion.div
+        className="absolute right-0 top-0 h-full w-[42%] bg-[linear-gradient(90deg,transparent,rgba(214,160,102,0.08))]"
+        animate={{ opacity: [0.55, 0.9, 0.55] }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+      ></motion.div>
+      <motion.div
+        className="absolute left-[8%] top-[25%] h-px w-[78%] rotate-[24deg] bg-accent/35"
+        animate={{ scaleX: [0.85, 1, 0.85], opacity: [0.22, 0.55, 0.22] }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+      ></motion.div>
+      <motion.div
+        className="absolute left-[13%] top-[18%] h-px w-[68%] -rotate-[20deg] bg-accent/25"
+        animate={{ scaleX: [1, 0.82, 1], opacity: [0.5, 0.18, 0.5] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      ></motion.div>
 
       <div className="section-container relative z-10">
         <div className="relative min-h-[calc(100vh-8rem)]">
@@ -44,30 +62,53 @@ export default function Hero() {
               </div>
             </div>
 
-            <h1 className="pointer-events-none relative max-w-6xl select-none text-[4.8rem] font-black uppercase leading-[0.78] text-white md:text-[8.5rem] lg:text-[10.5rem]">
-              <span className="block">Software</span>
-              <span className="block pl-0 md:pl-[28%]">Developer</span>
+            <h1 className="pointer-events-none relative z-20 max-w-6xl select-none text-[4.4rem] font-black uppercase leading-[0.8] text-white sm:text-[5.8rem] md:text-[8.5rem] lg:text-[10rem] xl:text-[10.5rem]">
+              <motion.span
+                className="block"
+                initial={{ opacity: 0, x: -48 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.75, delay: 0.1 }}
+              >
+                Software
+              </motion.span>
+              <motion.span
+                className="block pl-0 md:pl-[28%]"
+                initial={{ opacity: 0, x: 48 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.75, delay: 0.25 }}
+              >
+                Developer
+              </motion.span>
             </h1>
 
-            <div className="mt-12 grid gap-8 lg:grid-cols-[0.78fr_1fr_0.58fr] lg:items-end">
+            <motion.div
+              className="mt-12 grid gap-8 lg:grid-cols-[0.78fr_1fr_0.58fr] lg:items-end"
+              initial={{ opacity: 0, y: 22 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.65, delay: 0.45 }}
+            >
               <p className="max-w-sm border-l border-white/15 pl-5 text-sm leading-7 text-white/58">
                 Practical interfaces with real workflow logic: uploads,
                 dashboards, reports, maps, records, and clean user flows.
               </p>
 
               <div className="flex flex-wrap items-center justify-center gap-3">
-                {socialLinks.map((item) => {
+                {socialLinks.map((item, index) => {
                   const Icon = item.icon;
 
                   return (
-                    <a
+                    <motion.a
                       key={item.label}
                       href={item.href}
                       aria-label={item.label}
                       className="flex h-11 w-11 items-center justify-center border border-white/12 bg-white/[0.035] text-white/70 transition hover:-translate-y-1 hover:border-primary/50 hover:text-primary"
+                      initial={{ opacity: 0, y: 12 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.45, delay: 0.55 + index * 0.08 }}
+                      whileHover={{ y: -5, scale: 1.04 }}
                     >
                       <Icon size={18} />
-                    </a>
+                    </motion.a>
                   );
                 })}
               </div>
@@ -80,24 +121,58 @@ export default function Hero() {
                   CV
                 </a>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.92 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="pointer-events-none absolute bottom-24 right-0 hidden w-[24rem] lg:block"
+            initial={{ opacity: 0, y: 35, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.9, delay: 0.25 }}
+            className="relative z-10 mt-12 w-full max-w-[22rem] sm:max-w-[25rem] lg:absolute lg:bottom-20 lg:right-0 lg:mt-0 lg:w-[24rem]"
           >
-            <div className="relative aspect-[4/5] overflow-hidden border border-white/10 bg-black/40 shadow-glow">
+            <motion.div
+              className="relative aspect-[4/5] overflow-hidden border border-white/10 bg-black/40 shadow-glow"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            >
               <img
                 src="/media/profile.png"
                 alt="Arnaut Ezekiel Alfonso"
-                className="h-full w-full object-cover object-center opacity-50 grayscale"
+                className="h-full w-full object-cover object-center opacity-90"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent"></div>
-            </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/5 to-transparent"></div>
+              <motion.div
+                className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white/15 to-transparent"
+                animate={{ y: ["-100%", "560%"] }}
+                transition={{ duration: 4.5, repeat: Infinity, ease: "linear" }}
+              ></motion.div>
+              <div className="absolute bottom-5 left-5 right-5 border border-white/10 bg-black/45 p-4 backdrop-blur-md">
+                <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-primary">
+                  Based in Philippines
+                </p>
+                <p className="mt-2 text-lg font-black uppercase tracking-[0.08em] text-white">
+                  Web Systems
+                </p>
+              </div>
+            </motion.div>
           </motion.div>
+
+          <div className="pointer-events-none absolute right-2 top-28 hidden w-36 space-y-3 xl:block">
+            {floatingLabels.map((label, index) => (
+              <motion.div
+                key={label}
+                className="border border-white/10 bg-black/35 px-4 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-white/58 backdrop-blur-md"
+                animate={{ x: [0, index % 2 === 0 ? 12 : -12, 0] }}
+                transition={{
+                  duration: 4 + index,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                {label}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
