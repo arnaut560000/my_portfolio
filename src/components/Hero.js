@@ -10,8 +10,6 @@ const socialLinks = [
   { label: "Email", href: "mailto:arnautAlfonsor8@gmail.com", icon: Mail }
 ];
 
-const floatingLabels = ["NEXT.JS", "REACT", "FLASK", "MYSQL"];
-
 export default function Hero() {
   return (
     <section
@@ -62,7 +60,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <h1 className="pointer-events-none relative z-20 max-w-6xl select-none text-[4.4rem] font-black uppercase leading-[0.8] text-white sm:text-[5.8rem] md:text-[8.5rem] lg:text-[10rem] xl:text-[10.5rem]">
+            <h1 className="pointer-events-none relative z-20 max-w-6xl select-none text-[4.4rem] font-black uppercase leading-[0.8] text-white sm:text-[5.8rem] md:text-[8.5rem] lg:text-[9.2rem] xl:text-[9.8rem]">
               <motion.span
                 className="block"
                 initial={{ opacity: 0, x: -48 }}
@@ -72,7 +70,7 @@ export default function Hero() {
                 Software
               </motion.span>
               <motion.span
-                className="block pl-0 md:pl-[28%]"
+                className="block pl-0 md:pl-[22%] xl:pl-[25%]"
                 initial={{ opacity: 0, x: 48 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.75, delay: 0.25 }}
@@ -128,7 +126,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 35, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.25 }}
-            className="relative z-10 mt-12 w-full max-w-[22rem] sm:max-w-[25rem] lg:absolute lg:bottom-20 lg:right-0 lg:mt-0 lg:w-[24rem]"
+            className="relative z-10 mt-12 w-full max-w-[22rem] sm:max-w-[25rem] lg:absolute lg:bottom-20 lg:right-0 lg:mt-0 lg:w-[25rem] xl:w-[27rem]"
           >
             <motion.div
               className="relative aspect-[4/5] overflow-hidden border border-white/10 bg-black/40 shadow-glow"
@@ -140,7 +138,7 @@ export default function Hero() {
                 alt="Arnaut Ezekiel Alfonso"
                 className="h-full w-full object-cover object-center opacity-90"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/5 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/10"></div>
               <motion.div
                 className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white/15 to-transparent"
                 animate={{ y: ["-100%", "560%"] }}
@@ -156,23 +154,6 @@ export default function Hero() {
               </div>
             </motion.div>
           </motion.div>
-
-          <div className="pointer-events-none absolute right-2 top-28 hidden w-36 space-y-3 xl:block">
-            {floatingLabels.map((label, index) => (
-              <motion.div
-                key={label}
-                className="border border-white/10 bg-black/35 px-4 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-white/58 backdrop-blur-md"
-                animate={{ x: [0, index % 2 === 0 ? 12 : -12, 0] }}
-                transition={{
-                  duration: 4 + index,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              >
-                {label}
-              </motion.div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
