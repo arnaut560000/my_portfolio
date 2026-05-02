@@ -145,7 +145,7 @@ export default function Hero() {
                 animate={{ y: ["-100%", "620%"] }}
                 transition={{ duration: 6.5, repeat: Infinity, ease: "linear" }}
               ></motion.div>
-              <div className="absolute bottom-5 left-5 right-5 max-w-md border border-white/10 bg-black/50 p-5 backdrop-blur-md">
+             <div className="absolute bottom-4 left-4 right-4 w-auto max-w-full sm:max-w-md border border-white/10 bg-black/50 p-4 sm:p-5 backdrop-blur-md">
                 <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-primary">
                   Based in Philippines
                 </p>
