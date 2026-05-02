@@ -60,7 +60,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <h1 className="pointer-events-none relative z-20 max-w-6xl select-none text-[4.4rem] font-black uppercase leading-[0.8] text-white sm:text-[5.8rem] md:text-[8.5rem] lg:text-[10rem] xl:text-[10.6rem]">
+            <h1 className="pointer-events-none relative z-10 max-w-6xl select-none pb-10 text-[4.4rem] font-black uppercase leading-[0.9] text-white sm:text-[5.8rem] md:text-[8rem] lg:text-[9rem] xl:text-[9.6rem]">
               <motion.span
                 className="block"
                 initial={{ opacity: 0, x: -48 }}
@@ -126,7 +126,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 36, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.85, delay: 0.25 }}
-            className="relative z-10 mt-14 w-full"
+            className="relative z-20 mt-20 w-full md:mt-24"
           >
             <motion.div
               className="relative mx-auto aspect-[16/7] max-h-[34rem] min-h-[18rem] overflow-hidden border border-white/10 bg-[#111] shadow-glow md:min-h-[24rem]"
@@ -136,7 +136,7 @@ export default function Hero() {
               <img
                 src="/media/profile.png"
                 alt="Arnaut Ezekiel Alfonso"
-                className="h-full w-full object-cover object-center opacity-90"
+                className="h-full w-full object-cover object-center opacity-95"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-black/20"></div>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.16),transparent_34%)]"></div>
