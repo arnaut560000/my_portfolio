@@ -129,14 +129,14 @@ export default function Hero() {
             className="relative z-20 mt-20 w-full md:mt-24"
           >
             <motion.div
-              className="relative mx-auto aspect-[16/7] max-h-[34rem] min-h-[18rem] overflow-hidden border border-white/10 bg-[#111] shadow-glow md:min-h-[24rem]"
+              className="relative mx-auto max-w-5xl overflow-hidden border border-white/10 bg-[#111] shadow-glow"
               animate={{ y: [0, -4, 0] }}
               transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
             >
               <img
                 src="/media/profile.png"
                 alt="Arnaut Ezekiel Alfonso"
-                className="h-full w-full object-cover object-center opacity-95"
+                className="block h-auto w-full opacity-95"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-black/20"></div>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.16),transparent_34%)]"></div>
