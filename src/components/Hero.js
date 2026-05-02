@@ -123,34 +123,34 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 45, scale: 0.98 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
+            initial={{ opacity: 0, y: 36, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.85, delay: 0.25 }}
-            className="relative z-10 mt-12 w-full max-w-[22rem] sm:max-w-[25rem] lg:absolute lg:bottom-10 lg:right-0 lg:mt-0 lg:w-[31vw] lg:min-w-[28rem] lg:max-w-[31rem]"
+            className="relative z-10 mt-14 w-full"
           >
             <motion.div
-              className="relative aspect-[0.92] overflow-hidden border border-white/10 bg-[#111] shadow-glow"
-              animate={{ y: [0, -6, 0] }}
-              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+              className="relative mx-auto aspect-[16/7] max-h-[34rem] min-h-[18rem] overflow-hidden border border-white/10 bg-[#111] shadow-glow md:min-h-[24rem]"
+              animate={{ y: [0, -4, 0] }}
+              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
             >
               <img
                 src="/media/profile.png"
                 alt="Arnaut Ezekiel Alfonso"
-                className="h-full w-full object-cover object-center opacity-80 grayscale"
+                className="h-full w-full object-cover object-center opacity-90"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-black/20"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-black/20"></div>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.16),transparent_34%)]"></div>
               <motion.div
                 className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white/15 to-transparent"
-                animate={{ y: ["-100%", "560%"] }}
+                animate={{ y: ["-100%", "620%"] }}
                 transition={{ duration: 6.5, repeat: Infinity, ease: "linear" }}
               ></motion.div>
-              <div className="absolute bottom-5 left-5 right-5 border border-white/10 bg-black/45 p-4 backdrop-blur-md">
+              <div className="absolute bottom-5 left-5 right-5 max-w-md border border-white/10 bg-black/50 p-5 backdrop-blur-md">
                 <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-primary">
                   Based in Philippines
                 </p>
-                <p className="mt-2 text-lg font-black uppercase tracking-[0.08em] text-white">
-                  Web Systems
+                <p className="mt-2 text-xl font-black uppercase tracking-[0.08em] text-white">
+                  Web Systems Developer
                 </p>
               </div>
             </motion.div>
