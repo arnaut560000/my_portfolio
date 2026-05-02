@@ -15,19 +15,27 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50">
-      <div className="section-container pt-5">
-        <div className="flex h-20 items-center justify-between rounded-full border border-white/10 bg-black/35 px-6 shadow-glow backdrop-blur-xl">
-          <a href="#home" className="text-lg font-semibold uppercase tracking-[0.35em] text-white md:text-xl">
-            Port<span className="text-primary">folio</span>
+    <header className="fixed left-0 right-0 top-0 z-50">
+      <div className="section-container pt-6">
+        <div className="flex h-16 items-center justify-between border-b border-white/10 bg-[#07080a]/70 px-1 backdrop-blur-xl">
+          <a
+            href="#home"
+            className="group flex items-center gap-3 text-sm font-black uppercase tracking-[0.24em] text-white"
+          >
+            <span className="flex h-10 w-10 items-center justify-center border border-white/15 bg-white/[0.04] text-base tracking-[-0.04em] text-primary">
+              AE
+            </span>
+            <span>
+              Port<span className="text-primary">folio</span>
+            </span>
           </a>
 
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav className="hidden items-center gap-7 md:flex">
             {links.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-xs font-semibold uppercase tracking-[0.22em] text-white/70 transition hover:text-white"
+                className="text-[11px] font-bold uppercase tracking-[0.18em] text-white/58 transition hover:text-white"
               >
                 {link.name}
               </a>
@@ -35,7 +43,7 @@ export default function Navbar() {
           </nav>
 
           <div className="hidden items-center gap-3 md:flex">
-            <span className="rounded-full border border-primary/25 bg-primary/10 px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
+            <span className="border border-primary/35 bg-primary/10 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.18em] text-primary">
               Available
             </span>
             <a href="#contact" className="orange-btn px-5 py-2.5 text-xs">
@@ -44,7 +52,7 @@ export default function Navbar() {
           </div>
 
           <button
-            className="rounded-full border border-white/10 bg-white/[0.04] p-3 md:hidden"
+            className="border border-white/10 bg-white/[0.04] p-3 md:hidden"
             onClick={() => setOpen(!open)}
             aria-label="Toggle Menu"
           >
@@ -55,7 +63,7 @@ export default function Navbar() {
 
       {open && (
         <div className="section-container pt-3 md:hidden">
-          <div className="rounded-[1.75rem] border border-white/10 bg-black/60 p-5 shadow-glow backdrop-blur-xl">
+          <div className="border border-white/10 bg-black/80 p-5 shadow-glow backdrop-blur-xl">
             <div className="flex flex-col gap-4">
               {links.map((link) => (
                 <a

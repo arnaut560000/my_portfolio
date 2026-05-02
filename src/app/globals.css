@@ -20,9 +20,8 @@ html {
 body {
   min-height: 100vh;
   background:
-    radial-gradient(circle at top right, rgba(214, 160, 102, 0.16), transparent 28%),
-    radial-gradient(circle at 15% 20%, rgba(125, 211, 252, 0.08), transparent 22%),
-    linear-gradient(180deg, #060709 0%, #09090b 40%, #0d1015 100%);
+    linear-gradient(90deg, rgba(214, 160, 102, 0.08), transparent 38%),
+    linear-gradient(180deg, #07080a 0%, #09090b 42%, #0d1015 100%);
   color: var(--text);
   overflow-x: hidden;
   font-family: Bahnschrift, "Segoe UI Variable", "Segoe UI", sans-serif;
@@ -41,11 +40,11 @@ body {
 }
 
 .orange-btn {
-  @apply inline-flex items-center justify-center rounded-full border border-primary/40 bg-primary/90 px-6 py-3 text-sm font-semibold tracking-[0.12em] text-black transition duration-300 hover:-translate-y-0.5 hover:bg-primary;
+  @apply inline-flex items-center justify-center border border-primary/40 bg-primary/90 px-6 py-3 text-sm font-bold uppercase tracking-[0.12em] text-black transition duration-300 hover:-translate-y-0.5 hover:bg-primary;
 }
 
 .outline-btn {
-  @apply inline-flex items-center justify-center rounded-full border border-white/15 bg-white/[0.03] px-6 py-3 text-sm font-semibold tracking-[0.12em] text-white transition duration-300 hover:-translate-y-0.5 hover:border-primary/60 hover:bg-white/[0.06];
+  @apply inline-flex items-center justify-center border border-white/15 bg-white/[0.03] px-6 py-3 text-sm font-bold uppercase tracking-[0.12em] text-white transition duration-300 hover:-translate-y-0.5 hover:border-primary/60 hover:bg-white/[0.06];
 }
 
 .card-dark {
@@ -61,6 +60,14 @@ body {
     linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
   background-size: 36px 36px;
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.075) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.075) 1px, transparent 1px);
+  background-size: 54px 54px;
+  mask-image: linear-gradient(to bottom, black 68%, transparent 100%);
 }
 
 .eyebrow {
