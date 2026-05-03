@@ -60,7 +60,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <h1 className="pointer-events-none relative z-10 max-w-6xl select-none pb-10 text-[4.4rem] font-black uppercase leading-[0.9] text-white sm:text-[5.8rem] md:text-[8rem] lg:text-[9rem] xl:text-[9.6rem]">
+            <h1 className="pointer-events-none relative z-10 max-w-6xl select-none pb-8 text-[3.25rem] font-black uppercase leading-[0.92] text-white min-[420px]:text-[3.6rem] sm:text-[5rem] md:text-[7.2rem] lg:text-[9rem] xl:text-[9.6rem]">
               <motion.span
                 className="block"
                 initial={{ opacity: 0, x: -48 }}
@@ -80,7 +80,7 @@ export default function Hero() {
             </h1>
 
             <motion.div
-              className="mt-12 grid gap-8 lg:grid-cols-[0.78fr_1fr_0.58fr] lg:items-end"
+              className="mt-8 grid gap-8 lg:mt-12 lg:grid-cols-[0.78fr_1fr_0.58fr] lg:items-end"
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.45 }}
@@ -126,7 +126,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 36, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.85, delay: 0.25 }}
-            className="relative z-20 mt-20 w-full md:mt-24"
+            className="relative z-20 mt-14 w-full md:mt-24"
           >
             <motion.div
               className="relative mx-auto max-w-5xl overflow-hidden border border-white/10 bg-[#111] shadow-glow"
@@ -145,11 +145,11 @@ export default function Hero() {
                 animate={{ y: ["-100%", "620%"] }}
                 transition={{ duration: 6.5, repeat: Infinity, ease: "linear" }}
               ></motion.div>
-             <div className="absolute bottom-4 left-4 right-4 w-auto max-w-full sm:max-w-md border border-white/10 bg-black/50 p-4 sm:p-5 backdrop-blur-md">
-                <p className="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.22em] text-primary">
+              <div className="absolute bottom-3 left-3 right-3 max-w-md border border-white/10 bg-black/55 p-3 backdrop-blur-md sm:bottom-5 sm:left-5 sm:right-5 sm:p-5">
+                <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-primary sm:text-[10px] sm:tracking-[0.22em]">
                   Based in Philippines
                 </p>
-                <p className="mt-1 sm:mt-2 text-lg sm:text-xl font-black uppercase tracking-[0.08em] text-white">
+                <p className="mt-1 text-base font-black uppercase tracking-[0.08em] text-white sm:mt-2 sm:text-xl">
                   Web Systems Developer
                 </p>
               </div>
