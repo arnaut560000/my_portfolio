@@ -114,7 +114,7 @@ export default function Hero() {
                 <a href="#projects" className="orange-btn px-5 py-3 text-xs">
                   Projects
                 </a>
-                <a href="/resume.png" className="outline-btn px-5 py-3 text-xs" download>
+                <a href="/(fill this with resume ok)" className="outline-btn px-5 py-3 text-xs" download>
                   CV
                 </a>
               </div>
