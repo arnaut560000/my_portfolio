@@ -14,8 +14,8 @@ export const metadata = {
     images: [
       {
         url: "https://luxury-nasturtium-1af21d.netlify.app/facebook-preview.png",
-        width: 1200,
-        height: 630,
+        width: 1734,
+        height: 907,
         type: "image/png",
         alt: "Arnaut Ezekiel Alfonso web developer portfolio preview"
       }
