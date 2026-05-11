@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  metadataBase: new URL("https://luxury-nasturtium-1af21d.netlify.app"),
+  metadataBase: new URL("https://arnaut.vercel.app"),
   title: "Arnaut Ezekiel Alfonso | Portfolio",
   description:
     "Portfolio of Arnaut Ezekiel Alfonso, a web developer building practical systems for operations, tracking, mapping, and automation.",
@@ -9,11 +9,11 @@ export const metadata = {
     title: "Arnaut Ezekiel Alfonso | Portfolio",
     description:
       "Practical web systems for operations, tracking, mapping, dashboards, and workflow tools.",
-    url: "https://luxury-nasturtium-1af21d.netlify.app",
+    url: "https://arnaut.vercel.app",
     siteName: "Arnaut Ezekiel Alfonso Portfolio",
     images: [
       {
-        url: "https://luxury-nasturtium-1af21d.netlify.app/facebook-preview.png",
+        url: "https://arnaut.vercel.app/facebook-preview.png",
         width: 1734,
         height: 907,
         type: "image/png",
@@ -28,7 +28,7 @@ export const metadata = {
     title: "Arnaut Ezekiel Alfonso | Portfolio",
     description:
       "Practical web systems for operations, tracking, mapping, dashboards, and workflow tools.",
-    images: ["https://luxury-nasturtium-1af21d.netlify.app/facebook-preview.png"]
+    images: ["https://arnaut.vercel.app/facebook-preview.png"]
   }
 };
 
