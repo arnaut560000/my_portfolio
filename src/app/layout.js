@@ -13,7 +13,7 @@ export const metadata = {
     siteName: "Arnaut Ezekiel Alfonso Portfolio",
     images: [
       {
-        url: "https://luxury-nasturtium-1af21d.netlify.app/facebook-preview.png",
+        url: "https://arnaut.vercel.app/facebook-preview.png",
         width: 1200,
         height: 630,
         type: "image/png",
