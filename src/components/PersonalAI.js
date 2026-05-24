@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { ExternalLink } from "lucide-react";
 
 const highlights = [
   {
@@ -105,6 +106,16 @@ export default function PersonalAI() {
                 planning, reminders, and text-based interactions, with future
                 support for voice output and mobile deployment.
               </p>
+
+              <a
+                href="https://personal-ai-delta-pink.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                className="orange-btn mb-8 gap-2 px-5 py-3 text-xs"
+              >
+                View Prototype
+                <ExternalLink size={16} aria-hidden="true" />
+              </a>
 
               <div className="grid gap-4 sm:grid-cols-3">
                 {highlights.map((item) => (
