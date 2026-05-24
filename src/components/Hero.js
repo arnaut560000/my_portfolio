@@ -153,6 +153,10 @@ export default function Hero() {
                 </p>
               </div>
             </motion.div>
+            <p className="mx-auto mt-5 max-w-5xl border-l border-primary/45 pl-5 text-sm leading-7 text-white/68 md:text-base">
+              Specialized in management systems, operational monitoring,
+              automation, and digital workflow solutions.
+            </p>
           </motion.div>
         </div>
       </div>
