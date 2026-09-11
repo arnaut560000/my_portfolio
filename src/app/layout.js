@@ -2,6 +2,7 @@ import "./globals.css";
 
 export const metadata = {
   metadataBase: new URL("https://arnaut.vercel.app"),
+  alternates: { canonical: "/" },
   title: "Arnaut Ezekiel Alfonso | Portfolio",
   description:
     "Portfolio of Arnaut Ezekiel Alfonso, a web developer building practical systems for operations, tracking, mapping, and automation.",
@@ -35,7 +36,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <a href="#main-content" className="skip-link">Skip to content</a>
+        {children}
+      </body>
     </html>
   );
 }

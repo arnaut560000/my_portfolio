@@ -1,51 +1,23 @@
-import { promises as fs } from "fs";
-import path from "path";
+import profile from "../../../../screenshots/profile.jpg";
+import profilePng from "../../../../screenshots/profile.png";
+import ai from "../../../../screenshots/AI.jpg";
+import outage from "../../../../screenshots/outage-management-system.png";
+import apartment from "../../../../screenshots/apartment-management-system.png";
+import documents from "../../../../screenshots/document-management-system.png";
 
-const MIME_TYPES = {
-  ".avif": "image/avif",
-  ".gif": "image/gif",
-  ".jpeg": "image/jpeg",
-  ".jpg": "image/jpeg",
-  ".png": "image/png",
-  ".svg": "image/svg+xml",
-  ".webp": "image/webp"
-};
+// Preserve existing image URLs without reading user-selected filesystem paths.
+const images = new Map([
+  ["profile.jpg", profile],
+  ["profile.png", profilePng],
+  ["AI.jpg", ai],
+  ["outage-management-system.png", outage],
+  ["apartment-management-system.png", apartment],
+  ["document-management-system.png", documents],
+]);
 
-async function readFirstExistingFile(fileName) {
-  const locations = [
-    path.join(process.cwd(), "screenshots", fileName),
-    path.join(process.cwd(), "public", fileName)
-  ];
-
-  for (const filePath of locations) {
-    try {
-      const buffer = await fs.readFile(filePath);
-      return { buffer, filePath };
-    } catch (error) {
-      if (error.code !== "ENOENT") {
-        throw error;
-      }
-    }
-  }
-
-  return null;
-}
-
-export async function GET(_request, { params }) {
-  const fileName = params.filename;
-  const file = await readFirstExistingFile(fileName);
-
-  if (!file) {
-    return new Response("Image not found", { status: 404 });
-  }
-
-  const extension = path.extname(file.filePath).toLowerCase();
-  const contentType = MIME_TYPES[extension] || "application/octet-stream";
-
-  return new Response(file.buffer, {
-    headers: {
-      "Content-Type": contentType,
-      "Cache-Control": "public, max-age=3600"
-    }
-  });
+export async function GET(request, { params }) {
+  const { filename } = await params;
+  const image = images.get(filename);
+  if (!image) return new Response("Image not found", { status: 404 });
+  return Response.redirect(new URL(image.src, request.url), 307);
 }

@@ -1,16 +1,4 @@
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: Facebot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: LinkedInBot
-Allow: /
-
 User-agent: *
 Allow: /
 
-Sitemap: https://luxury-nasturtium-1af21d.netlify.app/sitemap.xml
+Sitemap: https://arnaut.vercel.app/sitemap.xml

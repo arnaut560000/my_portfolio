@@ -15,6 +15,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 body {
@@ -23,7 +24,6 @@ body {
     linear-gradient(90deg, rgba(214, 160, 102, 0.08), transparent 38%),
     linear-gradient(180deg, #07080a 0%, #09090b 42%, #0d1015 100%);
   color: var(--text);
-  overflow-x: hidden;
   font-family: Bahnschrift, "Segoe UI Variable", "Segoe UI", sans-serif;
 }
 
@@ -37,6 +37,40 @@ body {
 
 .section-container {
   @apply mx-auto max-w-7xl px-6 md:px-10;
+  min-width: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 5px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 1rem;
+  z-index: 100;
+  transform: translateY(-200%);
+  background: var(--primary);
+  color: #09090b;
+  padding: 0.75rem 1rem;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.contact-input {
+  @apply w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 text-base text-white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 .orange-btn {
