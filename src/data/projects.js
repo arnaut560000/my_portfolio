@@ -4,8 +4,51 @@ import documents from "../../screenshots/document-management-system.png";
 
 export const projects = [
   {
+    slug: "talavera-dental-scheduling",
+    title: "Talavera E-dental Scheduling",
+    category: "Government services",
+    status: "Featured project",
+    role: "Web development & maintenance",
+    repository: "https://github.com/arnaut560000/Dental_scheduling",
+    stack: ["Python", "Flask", "Supabase / PostgreSQL", "Render"],
+    summary: "A public request form and staff scheduling workspace for Talavera’s free dental service.",
+    problem: "Residents need a clear way to request dental assistance, while municipal staff need to organize requests, assign available clinic slots, and maintain a reliable history of appointments.",
+    focus: "Separating public requests from staff operations, validating available slots and clinic capacity, and controlling staff access by role. PostgreSQL supports hosted storage, while Render hosts the Flask application.",
+    workflow: [
+      { title: "Request assistance", text: "Residents submit their details and privacy consent through the public form." },
+      { title: "Organize the clinic day", text: "Staff review the oldest requests first and assign appointments within configured clinic days, time slots, and capacity." },
+      { title: "Keep a traceable record", text: "Authorized staff track appointment history, review audit events, and export the daily schedule as CSV." }
+    ],
+    visual: { label: "A resident request, through to a clinic schedule", steps: ["Resident request", "Staff review", "Clinic appointment"], foundation: "Flask application · Supabase database · Render hosting" },
+    evidence: ["Role-based staff access", "Configurable clinic schedule", "Appointment history & audit log", "Automated regression tests in the repository"],
+    outcome: "The system connects online requests, staff scheduling, walk-in registration, and daily schedule exports in one municipal service workflow.",
+    note: "The diagram explains the workflow; it contains no patient records. The linked source includes regression tests for scheduling, validation, staff permissions, and database migrations."
+  },
+  {
+    slug: "osy-connect",
+    title: "OSY Connect",
+    category: "Offline desktop application",
+    status: "Recent work",
+    role: "Desktop application development",
+    repository: "https://github.com/arnaut560000/capstone-client1",
+    stack: ["Python", "Tkinter", "SQLite", "ReportLab"],
+    summary: "An offline system for out-of-school youth records, printable ID cards, reports, and backups.",
+    problem: "A records workflow should remain usable without an internet connection or a separate web server, from registration through reporting.",
+    focus: "Building a native Python desktop interface over SQLite, with validated records, stable registration IDs, archive and restore, and portable backups containing the database and photos.",
+    workflow: [
+      { title: "Register and organize", text: "Capture personal, education, and employment information with validation and a persistent registration ID." },
+      { title: "Find and maintain records", text: "Search and filter records, update profiles, and archive or restore entries without permanently removing them." },
+      { title: "Print and preserve", text: "Generate PDF ID cards and reports, export CSV data, and create ZIP backups of local records and photos." }
+    ],
+    visual: { label: "Records that stay available offline", steps: ["Register", "Track locally", "Print & back up"], foundation: "Tkinter interface · Local SQLite storage · PDF & CSV exports" },
+    evidence: ["Works without a web server", "Reversible archive & restore", "PDF IDs and filtered reports", "Tests for imports, backups, and record integrity"],
+    outcome: "Registration, searchable profiles, printable outputs, and backups are available in one desktop application that can work offline.",
+    note: "Records are stored locally on each machine. Multi-device synchronization is not included. The repository contains the application source and packaging instructions."
+  },
+  {
     slug: "outage-management-system",
     title: "Outage Management System",
+    repository: "https://github.com/arnaut560000/outage_management",
     image: outage,
     category: "Monitoring & mapping",
     status: "Completed",
@@ -24,6 +67,7 @@ export const projects = [
   {
     slug: "apartment-management-system",
     title: "Apartment Management System",
+    repository: "https://github.com/arnaut560000/apartment-management-system",
     image: apartment,
     category: "Property operations",
     status: "Completed",
@@ -42,6 +86,7 @@ export const projects = [
   {
     slug: "document-management-system",
     title: "Document Management System",
+    repository: "https://github.com/arnaut560000/documents_management",
     image: documents,
     category: "Document workflows",
     status: "Prototype",

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://arnaut.vercel.app/</loc></url>
+  <url><loc>https://arnaut.vercel.app/projects/talavera-dental-scheduling</loc></url>
+  <url><loc>https://arnaut.vercel.app/projects/osy-connect</loc></url>
   <url><loc>https://arnaut.vercel.app/projects/outage-management-system</loc></url>
   <url><loc>https://arnaut.vercel.app/projects/apartment-management-system</loc></url>
   <url><loc>https://arnaut.vercel.app/projects/document-management-system</loc></url>

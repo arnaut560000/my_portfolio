@@ -6,12 +6,16 @@ Personal portfolio for web systems, operational dashboards, mapping, and documen
 
 ## Featured work
 
+- **Talavera E-dental Scheduling:** featured municipal service project with public requests, staff scheduling, role-based access, appointment history, and daily CSV exports. Built with Flask, Supabase/PostgreSQL, and Render.
+- **OSY Connect:** offline Python/Tkinter application for youth records, PDF ID cards, reporting, and local backups.
 - **Outage Management System:** map-based monitoring with KML/GPX/XLSX inputs, validation, affected-area detection, and interruption records.
 - **Apartment Management System:** tenant, unit, payment, and maintenance management.
 - **Document Management System:** a prototype for uploads, search, manual status tracking, and status history.
-- **Personal AI:** an assistant prototype exploring productivity, planning, and reminders.
+- **RoomAI / Personal AI:** a local AI companion experiment using FastAPI and Ollama, with conversational memory.
 
-Each management system has a dedicated walkthrough under `/projects/[slug]`. These describe the functionality and show existing screenshots; they do not expose live operational records or claim measured business results.
+Each selected system has a dedicated walkthrough under `/projects/[slug]` and a public source-code link. Existing projects retain their screenshots; Dental and OSY use labeled workflow diagrams. The site does not expose operational records or claim measured business results.
+
+The experience section records the confirmed Talavera Municipal Office role (July 2025–August 2026) and NEECO Engineering Department role (March–June 2025). The downloadable CV is the revised résumé.
 
 ## Development
 
@@ -35,7 +39,7 @@ npm start
 Next.js App Router, React, Tailwind CSS, and Lucide icons.
 
 - `src/app/`: homepage, project walkthroughs, metadata, global styles, and compatibility routes.
-- `src/components/`: hero, navigation, project cards, about, AI prototype, contact, and footer.
+- `src/components/`: hero, navigation, project cards and workflow visuals, experience, about, AI prototype, contact, and footer.
 - `src/data/projects.js`: shared project content and screenshot imports.
 - `screenshots/`: original project images. Next Image generates responsive optimized variants.
 - `public/`: downloadable CV, existing social-preview assets, robots.txt, and sitemap.xml.

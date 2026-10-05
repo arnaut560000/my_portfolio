@@ -3,13 +3,13 @@ import "./globals.css";
 export const metadata = {
   metadataBase: new URL("https://arnaut.vercel.app"),
   alternates: { canonical: "/" },
-  title: "Arnaut Ezekiel Alfonso | Portfolio",
+  title: "Arnaut Ezekiel Alfonso | Web Developer & Government Systems",
   description:
-    "Portfolio of Arnaut Ezekiel Alfonso, a web developer building practical systems for operations, tracking, mapping, and automation.",
+    "Web developer with government programming experience in Talavera, Nueva Ecija. Explore dental scheduling, offline records, and mapping projects built with Python, Flask, Supabase, and Render.",
   openGraph: {
     title: "Arnaut Ezekiel Alfonso | Portfolio",
     description:
-      "Practical web systems for operations, tracking, mapping, dashboards, and workflow tools.",
+      "Government programming experience, municipal scheduling systems, offline applications, and mapping tools by Arnaut Ezekiel Alfonso.",
     url: "https://arnaut.vercel.app",
     siteName: "Arnaut Ezekiel Alfonso Portfolio",
     images: [
@@ -28,7 +28,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Arnaut Ezekiel Alfonso | Portfolio",
     description:
-      "Practical web systems for operations, tracking, mapping, dashboards, and workflow tools.",
+      "Government programming experience, municipal scheduling systems, offline applications, and mapping tools by Arnaut Ezekiel Alfonso.",
     images: ["https://arnaut.vercel.app/facebook-preview.png"]
   }
 };

@@ -1,8 +1,8 @@
 const stacks = [
   { name: "Frontend", tools: ["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind CSS"] },
-  { name: "Backend", tools: ["Python", "Flask", "PHP", "Node.js", "REST APIs"] },
-  { name: "Data", tools: ["MySQL", "SQLite", "Data modeling", "Excel / XLSX"] },
-  { name: "Tools & mapping", tools: ["Git", "Leaflet", "KML", "GPX", "XAMPP"] }
+  { name: "Backend & desktop", tools: ["Python", "Flask", "PHP", "Laravel", "Tkinter"] },
+  { name: "Data & deployment", tools: ["Supabase", "PostgreSQL", "MySQL", "SQLite", "Render", "Vercel"] },
+  { name: "Tools & mapping", tools: ["Git / GitHub", "Leaflet", "KML / GPX", "Excel / XLSX", "ReportLab"] }
 ];
 
 export default function About() {
@@ -12,8 +12,8 @@ export default function About() {
         <div>
           <span className="eyebrow mb-5">About & skills</span>
           <h2 className="section-title">Practical problems. Useful software.</h2>
-          <p className="section-copy mt-6">I am a developer based in Nueva Ecija, Philippines. My work spans outage monitoring, apartment management, and document tracking, with an emphasis on clear interfaces and reliable workflows.</p>
-          <p className="section-copy mt-5">I enjoy connecting the interface with the logic behind it: structured records, file handling, maps, reports, and tools that make day-to-day work easier to follow.</p>
+          <p className="section-copy mt-6">Based in Nueva Ecija, Philippines, I bring hands-on experience developing and maintaining systems for local government, alongside technical support for municipal staff.</p>
+          <p className="section-copy mt-5">My work spans dental scheduling, sanitation office records, utility mapping, and offline desktop applications. I connect clear interfaces with the details behind them: validated records, staff permissions, useful reports, and maintainable workflows.</p>
           <a href="/Arnaut_online.pdf" className="outline-btn mt-7" download>Download CV</a>
         </div>
         <div className="grid gap-4 sm:grid-cols-2">

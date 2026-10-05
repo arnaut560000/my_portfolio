@@ -5,8 +5,8 @@ import { Menu, X } from "lucide-react";
 
 const links = [
   { name: "Projects", href: "#projects" },
+  { name: "Experience", href: "#experience" },
   { name: "About", href: "#about" },
-  { name: "Personal AI", href: "#personal-ai" },
   { name: "Contact", href: "#contact" }
 ];
 
@@ -31,7 +31,7 @@ export default function Navbar() {
           <nav aria-label="Main navigation" className="hidden items-center gap-6 lg:flex">
             {links.map((link) => <a key={link.name} href={link.href} className="inline-flex min-h-11 items-center text-sm text-white/75 hover:text-primary">{link.name}</a>)}
           </nav>
-          <a href="#contact" className="orange-btn hidden px-4 py-2 text-sm lg:inline-flex">Let&apos;s Talk</a>
+          <div className="hidden lg:block"><a href="#contact" className="orange-btn px-4 py-2 text-sm">Let&apos;s Talk</a></div>
           <button ref={menuButton} type="button" className="inline-flex h-11 w-11 shrink-0 items-center justify-center border border-white/15 lg:hidden" onClick={() => setOpen(!open)} aria-label={open ? "Close navigation menu" : "Open navigation menu"} aria-expanded={open} aria-controls="mobile-navigation">{open ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}</button>
         </div>
         {open && (
